@@ -1,0 +1,425 @@
+@font-face {
+  font-family: "Lgfont";
+  src: url("./LG_Smart_Bold_2.ttf");
+}
+
+html{
+  max-width: 430px;
+  height: calc(100vw * 1.95);
+  margin: 0 auto !important;
+  position: relative;
+  max-height: 730px;
+}
+
+body{
+  margin: 0 auto !important;
+  max-width: 430px;
+  height: 100%;
+  overflow: hidden;
+}
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+.panel{
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bground.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.loading-panel{
+  padding-top: 70px;
+  position: relative;
+  display: grid;
+}
+
+.img-styler{
+  position: absolute;
+  width: 220px;
+  top: 0px;
+  left: -35px;
+  transform: translate(-200px);
+  opacity: 0;
+}
+
+.img-dryer{
+  position: absolute;
+  width: 230px;
+  top: 7px;
+  right: -25px;
+  transform: translate(200px);
+  opacity: 0;
+}
+
+.img-WM{
+  position: absolute;
+  width: 230px;
+  bottom: 18px;
+  right: -25px;
+  transform: translate(200px);
+  opacity: 0;
+}
+
+.content-panel{
+  width: 320px;
+  height: 435px;
+  position: relative;
+  margin: auto;
+}
+
+.screen-1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.screen-2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.screen-3{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.screen-4{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.screen-5{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.screen-6{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.share-body{
+  width: 600px;
+  height: 800px;
+  background-image: url(../img/bg_share.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.text-panel-share{
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 75px;
+}
+
+.number-block-share{
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  font-size: 36px;
+  padding-top: 238px;
+}
+
+#num_percent_share{
+  font-size: 50px;
+  line-height: 1;
+}
+
+.block-item{
+  width: 100%;
+  height: 11%;
+}
+
+.block-item-3{
+  width: 100%;
+  height: 25px;
+}
+
+.text-home{
+  font-size: 27px;
+  font-weight: bolder;
+  color: #bc1e44;
+  text-align: center;
+  margin-top: 40px;
+  width: 320px;
+  margin-bottom: 25px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.content-data{
+  width: 280px;
+  height: 390px;
+  border-radius: 20px;
+  margin: auto;
+  display: grid;
+  position: relative;
+  background-color: #ffffff8c;
+}
+
+.choice-data{
+  width: 320px;
+  margin: auto;
+  position: relative;
+  height: 190px;
+}
+
+.choice_1{
+  width: 120px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  cursor: pointer;
+  transform: translate(150px);
+  opacity: 0;
+}
+
+.choice_2{
+  width: 125px;
+  position: absolute;
+  left: 100px;
+  bottom: 8px;
+  cursor: pointer;
+  transform: translate(200px);
+  opacity: 0;
+}
+
+.choice_3{
+  width: 125px;
+  position: absolute;
+  right: 0px;
+  bottom: 14px;
+  cursor: pointer;
+  transform: translate(250px);
+  opacity: 0;
+}
+
+.virus{
+  position: absolute;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #ffffff6e;
+  opacity: 0;
+}
+
+.virus-1{
+  transform: translate(180px);
+}
+.virus-2{
+  transform: translate(-20px,40px);
+}
+.virus-3{
+  transform: translate(-30px,40px);
+}
+.virus-4{
+  transform: translate(-180px,-40px);
+}
+.virus-5{
+  transform: translate(-100px,-80px);
+}
+
+.text-item{
+  position: absolute;
+  top: 0px;
+  width:100%;
+  height:100%;
+  border-radius: 15px;
+  line-height: 90px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  background-color: rgb(0 0 0 / 40%);
+}
+
+.text-item:hover {
+  background-color: rgb(0 0 0 / 40%) !important;
+}
+
+.img-main-data{
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+.text-question{
+  width: 370px;
+  margin: 50px auto 0px auto;
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+.text-next{
+  width: 370px;
+  margin: 50px auto -30px auto;
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+#next_btn{
+  width: 290px;
+  margin: auto;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+.scale-show{
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+.kq-img{
+  opacity: 0;
+  transform: scale(0,0);
+}
+
+#kq_text{
+  opacity: 0;
+  transform: scale(0,0);
+  font-family: "Lgfont";
+  font-size: 26px;
+  font-weight: bold;
+  color: #c81e43;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+.question-1{
+  background: url(../img/c1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.question-2{
+  background: url(../img/c2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.question-3{
+  background: url(../img/c31.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.question-31{
+  background: url(../img/c3.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.share-panel{
+  position: relative;
+  width: 270px;
+  margin-left: calc(50% - 135px);
+  margin-top: 10px;
+}
+
+.number-block{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(0 0 0 / 64%);
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.number-block > span{
+  font-size: 50px;
+}
+
+.text-panel{
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+
+.btn-item{
+  width: 90px;
+  height: 85px;
+  background: url(../img/item.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+.btn-share{
+  width: 130px;
+  margin: auto;
+}
+
+.img-share{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.bt-text{
+  color: white;
+}
+
+.logo-home{
+  background: url(../img/home.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 460px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.start-btn{
+  width: 250px;
+  cursor: pointer;
+  margin: auto;
+  opacity: 0;
+  transform: scale(0,0);
+}
