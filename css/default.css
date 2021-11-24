@@ -423,3 +423,11 @@ body{
   opacity: 0;
   transform: scale(0,0);
 }
+
+.loading-text{
+  opacity: 1;
+}
+
+.text-data{
+  opacity: 1;
+}

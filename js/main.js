@@ -27,6 +27,13 @@ function loadLoadSreen() {
 	    	gsap.fromTo(".start-btn",1, { scale: 1 }, { scale: 1.2,repeat:-1, yoyo:true} );
 	    }
 	});
+
+	gsap.from('.loading-text', {
+	  duration: 1,
+	  yPercent: 100,
+	  stagger: 0.3,
+	  opacity: 0
+	});
 }
 
 function timeoutcall(time,callback) {
@@ -77,6 +84,8 @@ function initClickEvent() {
 	document.getElementById('choice_s4_3').addEventListener('click',showShare);
 
 	document.getElementById('next_btn').addEventListener('click',showQues2);
+
+	document.getElementById('share_btn').addEventListener('click',shareGame);
 }
 
 function showQues1() {
@@ -119,7 +128,10 @@ function showShare() {
 	    duration: 1.5,
 	    scale: 1, 
 	    ease: "expo.out",
-	    opacity:1
+	    opacity:1,
+	    onComplete: () => {
+	    	gsap.fromTo(".kq-img",1, { scale: 0.95 }, { scale: 1.05,repeat:-1, yoyo:true} );
+	    }
 	});
 
 	gsap.to(`#kq_text`, {
@@ -315,6 +327,13 @@ function animationShowChoice(id) {
 		    }
 		});
 		gsap.fromTo(`.vi-s${id}-5`,4, { rotation: 0 }, { rotation: 360, repeat:-1, yoyo:true} );
+
+		gsap.from(`.text-${id}`, {
+		  duration: 1,
+		  yPercent: 100,
+		  stagger: 0.3,
+		  opacity: 0
+		});
 
 		gsap.to(`.img-main-${id}`, {
 		    duration: 1,
