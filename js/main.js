@@ -205,12 +205,12 @@ function shareGame(){
             // hashtag: '#lg',
             // quote: 'Máy sấy LG DUAL Inverter Heat Pump',
             // href: `https://dodohanhphucquanao.ga/${shareImage}`,
-            href: `https://dodohanhphucquanao.ga/${shareHtml}`,
+            href: `https://thatchung.github.io/GSV/${shareHtml}`,
             // link: `https://dodohanhphucquanao.ga/${shareImage}`,
             // picture: `https://dodohanhphucquanao.ga/${shareImage}`,
-            thumbnail: `https://dodohanhphucquanao.ga/${shareImage}`,
-            caption: 'Máy sấy LG DUAL Inverter Heat Pump Chăm Sóc Cho Quần Áo Của Bạn Luôn Luôn Hạnh Phúc!',
-            description: `Máy sấy LG DUAL Inverter Heat Pump Chăm Sóc Cho Quần Áo Của Bạn Luôn Luôn Hạnh Phúc!`
+            thumbnail: `https://thatchung.github.io/GSV/${shareImage}`,
+            caption: 'LG Chăm Sóc Cho Quần Áo Của Bạn Luôn Luôn Hạnh Phúc!',
+            description: `LG Chăm Sóc Cho Quần Áo Của Bạn Luôn Luôn Hạnh Phúc!`
         },
         function(response) {
             if (response && response.post_id) {
