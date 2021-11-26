@@ -214,9 +214,9 @@ function shareGame(){
         },
         function(response) {
             if (response && response.post_id) {
-                window.location.reload('/GSV');
+                window.location.reload();
             } else {
-                window.location.reload('/GSV');
+                window.location.reload();
             }
         }
     );
