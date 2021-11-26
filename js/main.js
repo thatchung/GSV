@@ -176,40 +176,24 @@ function showCorrect1() {
 function shareGame(){
 
 
-	let shareImage = 'img/s1.jpg';
-	let shareHtml = '30';
+	let shareImage = 'img/s_1.jpg';
+	let shareHtml = '10';
 
-	if(list_share_image.length > 0 && percent == 30) {
-		shareImage = list_share_image[0].s_img;
+	if(numberCorrect === 1) {
+		shareImage = 'img/s_1.jpg';
+		shareHtml = '10.html';
+	}
+	if(numberCorrect === 2) {
+		shareImage = 'img/s_2.jpg';
+		shareHtml = '20.html';
+	}
+	if(numberCorrect === 3) {
+		shareImage = 'img/s_3.jpg';
 		shareHtml = '30.html';
 	}
-	if(list_share_image.length > 0 && percent == 40) {
-		shareImage = list_share_image[1].s_img;
+	if(numberCorrect === 4) {
+		shareImage = 'img/s_4.jpg';
 		shareHtml = '40.html';
-	}
-	if(list_share_image.length > 0 && percent == 50) {
-		shareImage = list_share_image[2].s_img;
-		shareHtml = '50.html';
-	}
-	if(list_share_image.length > 0 && percent == 60) {
-		shareImage = list_share_image[3].s_img;
-		shareHtml = '60.html';
-	}
-	if(list_share_image.length > 0 && percent == 70) {
-		shareImage = list_share_image[4].s_img;
-		shareHtml = '70.html';
-	}
-	if(list_share_image.length > 0 && percent == 80) {
-		shareImage = list_share_image[5].s_img;
-		shareHtml = '501.html';
-	}
-	if(list_share_image.length > 0 && percent == 90) {
-		shareImage = list_share_image[6].s_img;
-		shareHtml = '90.html';
-	}
-	if(list_share_image.length > 0 && percent == 100) {
-		shareImage = list_share_image[7].s_img;
-		shareHtml = '100.html';
 	}
 
 
@@ -217,7 +201,7 @@ function shareGame(){
         {
             method: 'share',
             // display: 'popup',
-            name: 'Quần Áo Của Bạn Hạnh Phúc Đến Đâu?',
+            name: 'Quần áo của bạn cần gì?',
             // hashtag: '#lg',
             // quote: 'Máy sấy LG DUAL Inverter Heat Pump',
             // href: `https://dodohanhphucquanao.ga/${shareImage}`,
@@ -230,15 +214,9 @@ function shareGame(){
         },
         function(response) {
             if (response && response.post_id) {
-                document.getElementById('screen_5').style.display="none";
-				document.getElementById('loading_panel').style.display= "inherit";
-				document.getElementById('logo_lg').style.display="inherit";
-				document.getElementById('home_screen').style.backgroundImage = "url('../img/backgroud.jpg')";
+                window.location.reload();
             } else {
-                document.getElementById('screen_5').style.display="none";
-				document.getElementById('loading_panel').style.display= "inherit";
-				document.getElementById('logo_lg').style.display="inherit";
-				document.getElementById('home_screen').style.backgroundImage = "url('../img/backgroud.jpg')";
+                window.location.reload();
             }
         }
     );
@@ -363,45 +341,45 @@ function animationShowChoice(id) {
 	}
 }
 
-function showResult(nun_percent) {
+// function showResult(nun_percent) {
 	
-	document.getElementById('screen_3').style.display= "none";
-	document.getElementById('screen_4').style.display= "none";
-	document.getElementById('screen_5').style.display= "inherit";
+// 	document.getElementById('screen_3').style.display= "none";
+// 	document.getElementById('screen_4').style.display= "none";
+// 	document.getElementById('screen_5').style.display= "inherit";
 	
-	percent = nun_percent;
+// 	percent = nun_percent;
 
-	document.getElementById('logo_lg').style.display="none";
-	document.getElementById('home_screen').style.backgroundImage = "url('../img/backgroud_s.jpg')";
-	// setTimeout(function(){
-	// 	document.getElementById('home_screen').style.width = "100%";
-	// }, 500);
+// 	document.getElementById('logo_lg').style.display="none";
+// 	document.getElementById('home_screen').style.backgroundImage = "url('../img/backgroud_s.jpg')";
+// 	// setTimeout(function(){
+// 	// 	document.getElementById('home_screen').style.width = "100%";
+// 	// }, 500);
 
-	if(list_share_image.length > 0 && nun_percent == 30) {
-		document.getElementById('img_content').src = list_share_image[0].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 40) {
-		document.getElementById('img_content').src = list_share_image[1].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 50) {
-		document.getElementById('img_content').src = list_share_image[2].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 60) {
-		document.getElementById('img_content').src = list_share_image[3].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 70) {
-		document.getElementById('img_content').src = list_share_image[4].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 80) {
-		document.getElementById('img_content').src = list_share_image[5].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 90) {
-		document.getElementById('img_content').src = list_share_image[6].i_img;
-	}
-	if(list_share_image.length > 0 && nun_percent == 100) {
-		document.getElementById('img_content').src = list_share_image[7].i_img;
-	}
-}
+// 	if(list_share_image.length > 0 && nun_percent == 30) {
+// 		document.getElementById('img_content').src = list_share_image[0].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 40) {
+// 		document.getElementById('img_content').src = list_share_image[1].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 50) {
+// 		document.getElementById('img_content').src = list_share_image[2].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 60) {
+// 		document.getElementById('img_content').src = list_share_image[3].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 70) {
+// 		document.getElementById('img_content').src = list_share_image[4].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 80) {
+// 		document.getElementById('img_content').src = list_share_image[5].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 90) {
+// 		document.getElementById('img_content').src = list_share_image[6].i_img;
+// 	}
+// 	if(list_share_image.length > 0 && nun_percent == 100) {
+// 		document.getElementById('img_content').src = list_share_image[7].i_img;
+// 	}
+// }
 
 
 function hideHome() {
