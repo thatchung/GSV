@@ -15,7 +15,7 @@ body{
   margin: 0 auto !important;
   max-width: 430px;
   height: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 *::-webkit-media-controls-panel {
   display: none!important;
@@ -46,7 +46,7 @@ body{
   background-image: url(../img/bground.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .loading-panel{
