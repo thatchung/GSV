@@ -69,11 +69,11 @@ function initClickEvent() {
 		showQues3();
 	});
 
-	document.getElementById('choice_s3_1').addEventListener('click',showQues4);
-	document.getElementById('choice_s3_2').addEventListener('click',()=> {
+	document.getElementById('choice_s3_1').addEventListener('click',()=> {
 		numberCorrect += 1;
 		showQues4();
 	});
+	document.getElementById('choice_s3_2').addEventListener('click',showQues4);
 	document.getElementById('choice_s3_3').addEventListener('click',showQues4);
 
 	document.getElementById('choice_s4_1').addEventListener('click',showShare);
