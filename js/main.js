@@ -64,10 +64,7 @@ function initClickEvent() {
 
 	document.getElementById('choice_s2_1').addEventListener('click',showQues3);
 	document.getElementById('choice_s2_2').addEventListener('click',showQues3);
-	document.getElementById('choice_s2_3').addEventListener('click',()=> {
-		numberCorrect += 1;
-		showQues3();
-	});
+	document.getElementById('choice_s2_3').addEventListener('click',showCorrect2);
 
 	document.getElementById('choice_s3_1').addEventListener('click',()=> {
 		numberCorrect += 1;
@@ -77,13 +74,12 @@ function initClickEvent() {
 	document.getElementById('choice_s3_3').addEventListener('click',showQues4);
 
 	document.getElementById('choice_s4_1').addEventListener('click',showShare);
-	document.getElementById('choice_s4_2').addEventListener('click',()=> {
-		numberCorrect += 1;
-		showShare();
-	});
+	document.getElementById('choice_s4_2').addEventListener('click',showCorrect3);
 	document.getElementById('choice_s4_3').addEventListener('click',showShare);
 
-	document.getElementById('next_btn').addEventListener('click',showQues2);
+	document.getElementById('next_btn_6').addEventListener('click',showQues2);
+	document.getElementById('next_btn_7').addEventListener('click',showQues3);
+	document.getElementById('next_btn_8').addEventListener('click',showShare);
 
 	document.getElementById('share_btn').addEventListener('click',shareGame);
 }
@@ -105,6 +101,7 @@ function showQues2() {
 
 function showQues3() {
 	document.getElementById('screen_2').style.display= "none";
+	document.getElementById('screen_7').style.display= "none";
 	document.getElementById('screen_3').style.display= "grid";
 
 	animationShowChoice(3);
@@ -119,6 +116,7 @@ function showQues4() {
 
 function showShare() {
 	document.getElementById('screen_4').style.display= "none";
+	document.getElementById('screen_8').style.display= "none";
 	document.getElementById('screen_5').style.display= "grid";
 
 	animationShowChoice(5);
@@ -147,30 +145,89 @@ function showCorrect1() {
 	document.getElementById('screen_6').style.display= "grid";
 	numberCorrect += 1;
 	
-	gsap.to(`.text-next`, {
+	gsap.to(`.text-next-6`, {
 	    duration: 1.5,
 	    scale: 1, 
 	    ease: "elastic.out",
 	    opacity:1
 	});
 
-	gsap.to(`.scale-show`, {
+	gsap.to(`.scale-show-6`, {
 	    duration: 1.5,
 	    scale: 1, 
 	    ease: "expo.out",
 	    opacity:1
 	});
 
-	gsap.to(`#next_btn`, {
+	gsap.to(`.next_btn-6`, {
 	    duration: 1.5,
 	    scale: 1, 
 	    ease: "elastic.out",
 	    opacity:1,
 	    onComplete: () => {
-	    	gsap.fromTo("#next_btn",1, { scale: 1 }, { scale: 1.2,repeat:-1, yoyo:true} );
+	    	gsap.fromTo(".next_btn-7",1, { scale: 1 }, { scale: 1.2,repeat:-1, yoyo:true} );
 	    }
 	});
+}
 
+function showCorrect2() {
+	document.getElementById('screen_2').style.display= "none";
+	document.getElementById('screen_7').style.display= "grid";
+	numberCorrect += 1;
+	
+	gsap.to(`.text-next-7`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "elastic.out",
+	    opacity:1
+	});
+
+	gsap.to(`.scale-show-7`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "expo.out",
+	    opacity:1
+	});
+
+	gsap.to(`.next_btn-7`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "elastic.out",
+	    opacity:1,
+	    onComplete: () => {
+	    	gsap.fromTo(".next_btn-7",1, { scale: 1 }, { scale: 1.2,repeat:-1, yoyo:true} );
+	    }
+	});
+}
+
+function showCorrect3() {
+	document.getElementById('screen_4').style.display= "none";
+	document.getElementById('screen_8').style.display= "grid";
+	numberCorrect += 1;
+	
+	gsap.to(`.text-next-8`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "elastic.out",
+	    opacity:1
+	});
+
+	gsap.to(`.scale-show-8`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "expo.out",
+	    opacity:1
+	});
+
+	gsap.to(`.next_btn-8`, {
+	    duration: 1.5,
+	    scale: 1, 
+	    ease: "elastic.out",
+	    opacity:1,
+	    onComplete: () => {
+	    	gsap.fromTo(".next_btn-8",1, { scale: 1 }, { scale: 1.2,repeat:-1, yoyo:true} );
+	    }
+	});
 }
 
 function shareGame(){
